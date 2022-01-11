@@ -36,4 +36,6 @@ app.get("/crewmembers", (req, res) => {
 		.catch((e) => res.send(e.message));
 });
 
-app.listen(3000, () => console.log(`Server running on port ${port}`));
+app.listen(process.env.PORT || 5000, () =>
+	console.log(`Server running on port ${port}`)
+);
